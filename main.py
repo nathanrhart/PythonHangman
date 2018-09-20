@@ -54,6 +54,7 @@ def play():
       print("Congratulations, you guessed the word: ")
       menu()
   if wrongcount >= 6:
+    drawhangman(wrongcount)
     print("Oh no! you lose! the word was: ")
 
   print(listjoin(chosenword))
