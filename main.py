@@ -28,7 +28,6 @@ def play():
   wrongcount = 0
   wordlist = loadnouns()
   chosenword = list(random.choice(wordlist))
-  print(chosenword)
   guess = ["_ "] * len(chosenword)
   debugchosen = listjoin(chosenword).replace(" ", "")
   guessed = []
