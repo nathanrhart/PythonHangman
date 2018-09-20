@@ -31,7 +31,7 @@ def play():
   guess = ["_ "] * len(chosenword)
   debugchosen = listjoin(chosenword).replace(" ", "")
   guessed = []
-  while wrongcount < 7:
+  while wrongcount < 6:
     drawhangman(wrongcount)
     print(listjoin(guess))
     print("Current Guesses: " + str(guessed))
@@ -48,11 +48,15 @@ def play():
       if userinput not in chosenword:
         print("That's not in the word!")
         wrongcount += 1
-
+  
     debugguess = listjoin(guess).replace(" ", "")
     if debugguess == debugchosen:
-      print("Congratulations, you guessed the word: " + debugguess)
+      print("Congratulations, you guessed the word: ")
       menu()
+  if wrongcount >= 6:
+    print("Oh no! you lose! the word was: ")
+
+  print(listjoin(chosenword))
   menu()
         
         
